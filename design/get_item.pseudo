@@ -9,23 +9,51 @@
 
 START get_item
 
-    # TODO 1: Identify the information the get-item process needs.
-    # Consider the current room, item in that room, and player's inventory.
+    # TODO 1: Set inventory to an empty list
 
-    # TODO 2: Prompt for and receive the player's get-item command.
+        Ask the player:
+        Enter the item you want to get.
 
-    # TODO 3: Validate whether the requested item is available in the current
-    # room. Show the decision clearly.
+    Get the player's item choice
 
-    # TODO 4: Describe what happens when the item request is valid.
-    # Include the inventory update and player output.
+    IF current_room is Kitchen
+    AND item choice is Healing Potion
 
-    # TODO 5: Describe what happens when the item request is invalid.
-    # Include the output the player should receive.
+    Add "Healing Potion" to inventory
 
-    # TODO 6: Show how the process returns to or continues the larger gameplay
-    # loop after the command is handled.
+    Display You picked up the Healing Potion
 
+    
+
+    # TODO 2: ELSE IF current_room is "Cellar"
+    AND item choice is Dragonfire Antidote
+
+    Add "Dragonfire Antidote" to inventory
+
+    Display "You picked up the Dragonfire Antidote."
+
+# TODO 3:  ELSE IF current_room is "Armory"
+    AND item choice is "Dragon-Slaying Sword"
+
+    Add "Dragon-Slaying Sword" to inventory
+
+    Display "You picked up the Dragon-Slaying Sword."
+
+ # TODO 4: ELSE IF current_room is "Award Room"
+    AND item choice is "Magic Shield"
+
+    Add "Magic Shield" to inventory
+
+    Display "You picked up the Magic Shield."
+
+# TODO 5: ELSE IF current_room is "Master Bedroom"
+    AND item choice is "Dragon Key"
+
+    Add "Dragon Key" to inventory
+
+# TODO 6:     Display "You picked up the Dragon chamber Key
+
+   
 END get_item
 
 
