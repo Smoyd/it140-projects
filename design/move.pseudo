@@ -7,19 +7,108 @@
 # Write pseudocode, not Python code. Use clear indentation and course-appropriate
 # keywords such as INPUT, OUTPUT, IF, ELSE, WHILE, SET, or similar terms.
 
-# TODO 1: Identify the information the movement process needs.
-# Consider the player's current room and movement command.
+# START
 
-# TODO 2: Prompt for and receive the player's movement command.
+Set current_room to "Front Door"
 
-# TODO 3: Validate whether the requested movement is possible from the
-# current room. Show the decision clearly.
+Display current room
 
-# TODO 4: Describe what happens when the movement command is valid.
-# Include the room update and player output.
+Ask the player:
 
-# TODO 5: Describe what happens when the movement command is invalid.
-# Include the output the player should receive.
+ "Enter a direction: North, South, East, or West"
 
-# TODO 6: Show how movement fits into repeated gameplay.
-# The final game continues accepting commands until a required ending occurs.
+Get the player's direction
+
+IF current_room is "Front Door"
+
+IF direction is East
+
+Move to "Hallway"
+
+ELSE:
+
+Display "You cannot go that way."
+
+ELSE:
+
+ IF current room is "Hallway"
+
+IF direction is South
+
+   Move to "Kitchen"
+
+ELSE:
+
+Display "You cannot go that way."
+
+ELSE:
+
+IF current room is "Kitchen"
+
+IF direction is East
+
+Move to "Cellar"
+
+ELSE:
+
+Display "You cannot go that way."
+
+ELSE:
+
+IF current room is "Cellar"
+
+IF direction is South
+
+Move to "Armory
+
+ ELSE
+
+ Display "You cannot go that way."
+
+ELSE 
+
+IF current_room is "Armory"
+
+IF direction is West
+
+Move to "Award Room"
+
+ELSE
+
+        Display "You cannot go that way."
+
+ELSE IF current_room is "Award Room"
+
+  IF direction is West
+
+        Move to "Master Bedroom"
+
+    ELSE
+
+        Display "You cannot go that way."
+
+ELSE IF current_room is "Master Bedroom"
+
+IF direction is South
+
+        Move to "Stairwell"
+
+    ELSE
+
+        Display "You cannot go that way."
+
+ELSE IF current_room is "Stairwell"
+
+IF direction is East
+
+        Move  to "Dragon Dungeon"
+
+    ELSE
+
+        Display "You cannot go that way."
+
+ELSE IF current_room is "Dragon Dungeon"
+
+ Display "You have reached the dragon!"
+
+END
