@@ -9,14 +9,35 @@ rooms = {
 }
 
 
-# TODO: Set the player's starting room for the simplified prototype.
+# TODO:rooms = {
+    "Front Door": {"East": "Hallway"},
+	"Hallway" :{"West" : "Front Door", "South" : "Kitchen"},
+ 	"Kitchen": {"North" : "Hallway","East": "Cellar"},
+    "Cellar": {"West": "Kitchen","South": "Armory"},
+    "Armory": {"North": "Armory" ,"West","Award Room"},
+    "Award Room": {"East" : "Award Room","West":"Master Bedroom"},
+    "Master Bedroom": {"East": "Master Bedroom","East": "Dragon Chamber"},
+    "Dragon Chamber": {"South": "Dragon Dungeon"},
+    "Dragon Dungeon": {}
+}
+ 
+current_room = "Front Door"
+ 
+while current_room != "Dragon Dungeon":
+    print("\nYou are in the", current_room)
+ 
+    direction = input(
+        "Enter a direction (North, South, East, West): "
+    ).strip().title()
+    if direction == "Exit":
+      break 
+    if direction in rooms[current_room]:
+        current_room = rooms[current_room][direction]
+    else:
+        print("You cannot go that way.")
+ 
+print("\nYou are in the Dragon Dungeon!")
+print("You have reached the dragon!")
 
-# TODO: Create the gameplay loop required by the milestone.
-# Within the loop, complete the required behavior in small steps:
-#   1. Display the current room.
-#   2. Prompt for a movement command or "exit".
-#   3. Branch for a valid move, exit, or invalid input.
-#   4. Update the room only after a valid movement command.
-#   5. Continue until the required exit condition is reached.
 
 # TODO: Run and debug all milestone cases in prototype/README.md.
