@@ -19,14 +19,14 @@ def show_instructions():
 
 def show_status(current_room, inventory, rooms):
     """Display the player's current game status."""
-    print("\n-------------------------")
+    print("\n---------")
     print("You are in the", current_room)
     print("Inventory:", inventory)
 
     if rooms[current_room]["item"] is not None:
         print("You see:", rooms[current_room]["item"])
 
-    print("-------------------------")
+    print("---------")
 
 
 def main():
